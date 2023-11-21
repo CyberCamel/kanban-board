@@ -2,9 +2,9 @@
     "name": "backend",
     "version": "0.0.0",
     "private": true,
-    "type":"module",
+    "type": "module",
     "scripts": {
-        "start": "node ./bin/www.js"
+        "start": "nodemon ./bin/www.js"
     },
     "dependencies": {
         "cookie-parser": "~1.4.4",
@@ -12,6 +12,8 @@
         "express": "^4.18.2",
         "http-errors": "~1.6.3",
         "jstransformer": "^1.0.0",
+        "mongoose": "^8.0.1",
+        "nodemon": "^3.0.1",
         "socket.io": "^4.7.2"
     }
 }

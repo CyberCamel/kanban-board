@@ -1,9 +1,13 @@
 import express from 'express'
+import Schema, { mongoose } from 'mongoose'
 const app = express()
-const PORT = process.env.PORT || 3000
 
-app.get('/', (req, res) => {
-    res.send('Hello, Express!')
+
+
+mongoose.
+
+app.get('/ping', (req, res) => {
+    res.send('PONG!!!!!')
 })
 
 export default app
