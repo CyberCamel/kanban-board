@@ -1,29 +1,21 @@
-import  mongoose from "mongoose"
+import {sequelize} from '../db.js'
 
-const Schema = mongoose.Schema
+import { Sequelize, DataTypes } from 'sequelize'
 
-mongoose.connect()
-
-const board = new Schema({
+const Board = sequelize.define('Board', {
+    id: {
+        type: DataTypes.INTEGER,
+        primaryKey: true,
+        autoIncrement: true
+    },
     name: {
-        type: String,
-        required: true,
-        unique: false
+        type: DataTypes.STRING(255),
+        allowNull: false
     },
     guid: {
-        type: String
-    },
-    cards: [
-        {
-            title: {
-                type: String
-            },
-            content: {
-                type: String
-            },
-            status: {
-                type: String
-            }
-        }
-    ]
+        type: DataTypes.UUID,
+        defaultValue: Sequelize.UUIDV4,
+        allowNull: false
+    }
 })
+export default Board

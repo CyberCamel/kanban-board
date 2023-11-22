@@ -1,19 +1,23 @@
 {
-    "name": "backend",
+    "name": "kanban-board-server",
     "version": "0.0.0",
     "private": true,
     "type": "module",
     "scripts": {
-        "start": "nodemon ./bin/www.js"
+        "start": "nodemon ./bin/www.js",
+        "migrate": "node ./bin/migrate.js"
     },
     "dependencies": {
         "cookie-parser": "~1.4.4",
+        "cors": "^2.8.5",
         "debug": "~2.6.9",
         "express": "^4.18.2",
         "http-errors": "~1.6.3",
         "jstransformer": "^1.0.0",
-        "mongoose": "^8.0.1",
         "nodemon": "^3.0.1",
+        "pg": "^8.11.3",
+        "pg-hstore": "^2.3.4",
+        "sequelize": "^6.35.1",
         "socket.io": "^4.7.2"
     }
 }
