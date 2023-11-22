@@ -29,7 +29,7 @@ try {
 
 app.get('/api/ping', (req, res) => {
     console.log('accessing /ping')
-    res.send('PONG!!!!!')
+    res.send('PONG!')
 })
 
 app.post('/api/Boards', async (req, res) => {
