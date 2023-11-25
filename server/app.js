@@ -69,10 +69,11 @@ app.get('/api/Boards', async (req, res) => {
 
 app.post('/api/Boards/:board/tasks', async (req, res) => {
     console.log(`POST to /Boards/${req.params.board}/tasks`)
+    let result
     try {
-        const result = await Task.create({
-            title: 'task1',
-            content: 'asdasd',
+        result = await Task.create({
+            title: req.body.Title,
+            content: req.body.Content,
             BoardId: req.params.board
         })
     } catch (error) {
@@ -86,7 +87,7 @@ app.post('/api/Boards/:board/tasks', async (req, res) => {
         return
     }
 
-    res.send({ success: true, created: result.id })
+    res.send({ status: 200, success: true, created: result.id })
 })
 
 app.get('/api/Boards/:board/tasks', async (req, res) => {

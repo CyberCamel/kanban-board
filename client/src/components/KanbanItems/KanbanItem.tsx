@@ -9,14 +9,15 @@ interface IKanbanTaskProps {
     content: string
 }
 
-function KanbanItem({ title,content }: IKanbanTaskProps) {
-
-
-    return <>
-        <div className="kanban-task-container">
-            
-        </div>
-    </>
+function KanbanItem({ title, content }: IKanbanTaskProps) {
+    return (
+        <>
+            <div className="kanban-task-container">
+                <h4>{title}</h4>
+                <p>{content}</p>
+            </div>
+        </>
+    )
 }
 
 export default KanbanItem

@@ -26,7 +26,9 @@ function KanbanList() {
         <>
             <ul className="kanban-list">
                 {boards?.map((board, index) => (
-                    <li key={index}>{board.name}</li>
+                    <li key={index}>
+                        <a href={`/boards/${board.id}`}>{board.name}</a>
+                    </li>
                 ))}
             </ul>
         </>
